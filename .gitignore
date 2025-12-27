@@ -1,0 +1,11 @@
+# Large dataset and generated artifacts (do not commit)
+ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1/
+ecg_processed/
+processed_images/
+gradcam_out/
+Books/
+Model/Predict/22k_arrays.npy
+Model/Predict/22k_labels.npy
+Model/Train/ecg_images_array.npy
+Model/best_resnet50_ecg_model.pth
+Model/best_resnet50_fold4.pth

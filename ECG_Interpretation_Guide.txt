@@ -1,0 +1,321 @@
+ECG Interpretation Guide
+A practical, systematic reference for clinicians and students
+
+Contents
+1. Basic electrophysiology and the origin of ECG waves
+2. Systematic approach to ECG interpretation (stepwise)
+3. Measurements and normal values
+4. Waveform analysis: P, PR, QRS, QT/QTc, ST, T, U
+5. Rhythm analysis and common supraventricular/ventricular arrhythmias
+6. Conduction disturbances: AV blocks, bundle branch blocks, fascicular blocks
+7. Chamber enlargement and hypertrophy criteria
+8. Acute myocardial infarction (STEMI/NSTEMI): localization, reciprocal changes, stages
+9. Special patterns and mimics (hyperkalemia, CNS, pericarditis, early repolarization, posterior infarct)
+10. Quick‑reference algorithms and bedside checklists
+11. Practical tips for serial ECGs, lead placement, and pitfalls
+
+1. Physiology behind ECG waves (brief)
+- The surface ECG records summed electrical vectors of myocardial depolarization and repolarization.
+  - P wave: atrial depolarization (primarily right and left atria sequentially). Normal: small, smooth, <120 ms duration.
+  - PR interval: time from atrial depolarization onset to ventricular depolarization onset (AV nodal delay + atrial conduction + His conduction).
+  - QRS complex: ventricular depolarization (rapid conduction through His–Purkinje system). Narrow QRS reflects normal conduction; wide QRS reflects intraventricular conduction delay or ventricular origin.
+  - ST segment: isoelectric period between ventricular depolarization and repolarization; sensitive to injury currents.
+  - T wave: ventricular repolarization (vector influenced by transmural and regional recovery gradients).
+  - U wave: small wave after the T in some leads; associated with late repolarization of Purkinje fibers or midmyocardial cells (seen in hypokalemia, bradycardia).
+- Lead system: 12 leads provide different projection vectors: frontal plane (I, II, III, aVR, aVL, aVF) and horizontal plane (V1–V6).
+
+2. Systematic ECG interpretation — a practical stepwise approach
+1) Patient, date/time, calibration, paper speed (usually 25 mm/s), amplitude (10 mm = 1 mV).
+2) Rate (ventricular and atrial when possible).
+3) Rhythm: regularity, P–QRS relationship, presence/absence of P waves, AV association.
+4) P-wave morphology (size, axis, bifidity/biphasic).
+5) PR interval: measure and assess constant vs. variable.
+6) QRS duration and morphology (narrow vs. wide, axis).
+7) QRS axis in frontal plane.
+8) Hypertrophy/chamber enlargement criteria.
+9) ST‑segment deviations (elevation/depression) and morphology (convex, concave, horizontal).
+10) T‑wave abnormalities (peaked, flattened, inverted, symmetric vs. asymmetric).
+11) QT and QTc measurement.
+12) Look for U waves, pathological Q waves, and electrical alternans.
+13) Compare with previous ECGs and correlate clinically.
+
+3. Measurements and normal values
+- Paper speed: 25 mm/s (1 small box = 0.04 s, 1 large box = 0.20 s).
+- Voltage: 10 mm = 1 mV (1 small box = 0.1 mV).
+- Heart rate: 300 / number of large boxes between consecutive R waves (regular rhythm) or count QRS in 6‑second strip × 10 (irregular rhythm).
+- Normal intervals:
+  - PR interval: 120–200 ms (0.12–0.20 s).
+  - QRS duration: <120 ms (<0.12 s) — narrow; 120–140 ms borderline; ≥120 ms wide.
+  - QT interval: rate dependent; measure in a lead with clear end of T; QTc by Bazett = QT / √RR (seconds). Common reference QTc: <440 ms (men), <460 ms (women). QTc >500 ms confers higher torsades risk.
+- Axis: normal −30° to +90° (some sources use −30° to +100°). Left axis deviation: −30° to −90°. Right axis deviation: +90° to +180°.
+
+4. Detailed waveform analysis
+
+P wave
+- Normal: ≤120 ms duration, amplitude ≤2.5 mm in limb leads, smooth dome in II.
+- Right atrial enlargement (RAE): tall, peaked P waves in II >2.5 mm; V1 P wave tall initial component may be increased.
+- Left atrial enlargement (LAE): P wave duration >120 ms, bifid (notched) P in lead II (P‑mitrale), or biphasic P in V1 with terminal negative portion ≥40 ms duration and ≥1 mm depth.
+
+PR interval
+- Prolongation >200 ms = first-degree AV block.
+- Short PR <120 ms suggests pre‑excitation (e.g., WPW) or junctional rhythm.
+- Variable PR with nonconducted P waves suggests second‑degree AV block.
+
+QRS complex
+- Duration:
+  - Normal <120 ms.
+  - Intraventricular conduction delay (IVCD) 110–119 ms (sometimes called incomplete bundle branch block).
+  - Bundle branch block (complete) ≥120 ms.
+- Morphology:
+  - Left bundle branch block (LBBB): QRS ≥120 ms; broad monomorphic R in lateral leads (I, aVL, V5–V6); absent initial Q in lateral leads; secondary ST‑T changes (discordant).
+  - Right bundle branch block (RBBB): QRS ≥120 ms; rsR' (M‑pattern) in V1–V3; wide S waves in I and V6.
+  - Dominant Q wave: pathological Q wave suggests transmural infarction if ≥40 ms and depth ≥25% of ensuing R wave in contiguous leads (context and clinical correlation required).
+
+QT and QTc
+- Measure QT from beginning of QRS to end of T; choose a lead with clear end of T (commonly V5 or II).
+- Correct for heart rate: QTc by Bazett frequently used (QTc = QT/√RR). Note Bazett overcorrects at extremes of rate; consider Fridericia or linear formulas in nuanced contexts.
+- QTc thresholds:
+  - Normal: <440 ms (men), <460 ms (women).
+  - Considered prolonged when ≥450 ms men, ≥470 ms women; markedly prolonged if ≥500 ms.
+- Prolongation predisposes to torsades de pointes.
+
+ST segment
+- ST elevation: evaluate at J point relative to baseline (PR segment); morphology matters:
+  - Convex/upward (domed) elevation more suggestive of acute injury (STEMI).
+  - Concave elevation may be benign (early repolarization) or pericarditis.
+- Significant ST elevation (general rule):
+  - ≥1 mm (0.1 mV) in two contiguous limb leads or leads V4–V6.
+  - In V2–V3 higher thresholds: men ≥2 mm (0.2 mV), women ≥1.5 mm (0.15 mV) (age dependent). (Clinical guidelines vary; always integrate clinical context.)
+- ST depression: horizontal or downsloping ≥0.5–1.0 mm in contiguous leads implies ischemia; ST depression in anterior leads may represent posterior MI (reciprocal).
+
+T wave
+- Normal T: upright in leads with upright QRS, asymmetrical (slow upstroke, rapid downstroke).
+- Peaked, narrow, tall T waves: hyperkalemia (early ECG sign).
+- Wide, symmetric, very tall T waves with QT prolongation and altered morphology can indicate CNS catastrophe (classically).
+- T inversion: ischemia, recent infarct, left ventricular strain; symmetric deep inversions are more concerning for ischemia.
+- Persistent T inversion in certain leads can indicate prior infarction or cardiomyopathy.
+
+U wave
+- Small positive deflection after T, best seen in V2–V3.
+- Prominent U waves: hypokalemia, bradycardia, drug effects (digitalis can change U wave), congenital long QT syndromes.
+
+5. Rhythm disturbances — identification and diagnostic criteria
+
+Sinus rhythms
+- Normal sinus rhythm (NSR): P wave before each QRS, consistent morphology, PR 120–200 ms, regular RR.
+- Sinus bradycardia: sinus rate <60/min; often normal in athletes, or due to drugs/AV nodal disease.
+- Sinus tachycardia: rate >100/min; physiologic or pathologic.
+
+Supraventricular arrhythmias
+- Atrial fibrillation (AF):
+  - Absent discrete P waves, chaotic baseline fibrillatory waves, irregularly irregular RR intervals.
+  - Rate: variable; rapid ventricular response common.
+- Atrial flutter (AFL):
+  - Rapid, regular atrial activity (typical atrial flutter 240–340/min) with “sawtooth” flutter waves best in II, III, aVF.
+  - Ventricular response often 2:1, 3:1, or variable conduction.
+- Multifocal atrial tachycardia (MAT):
+  - Irregular rhythm with three or more morphologically distinct P waves and varying PR intervals; rate >100/min.
+  - Often seen with COPD/exacerbation or hypoxia.
+- Paroxysmal supraventricular tachycardia (PSVT) / AV nodal reentrant tachycardia (AVNRT):
+  - Regular narrow complex tachycardia, rate typically 150–250/min, P waves often absent/fused with QRS or retrograde P after QRS.
+
+Ventricular arrhythmias
+- Premature ventricular contractions (PVCs):
+  - Wide QRS (>120 ms), no preceding P wave, compensatory pause often present, morphology depends on origin.
+- Ventricular tachycardia (VT):
+  - Wide complex tachycardia (>120 ms), usually regular, rate >100–120/min. Monomorphic VT has uniform QRS morphology; polymorphic VT varies.
+  - Look for AV dissociation, capture or fusion beats to support VT over SVT with aberrancy.
+- Ventricular fibrillation (VF):
+  - Chaotic, disorganized electrical activity with no discernible QRS complexes, immediate life-threatening.
+
+6. Atrioventricular (AV) blocks and their ECG features
+- First-degree AV block:
+  - PR interval >200 ms, every P conducted (one‑to‑one).
+- Second-degree AV block — Mobitz I (Wenckebach):
+  - Progressive PR prolongation until a nonconducted P wave; often narrow QRS and at AV nodal level.
+- Second-degree AV block — Mobitz II:
+  - Intermittent nonconducted P waves without progressive PR prolongation; usually fixed PR intervals before dropped beats; often infranodal and more likely to progress to complete block.
+- 2:1 AV block:
+  - Every second P wave is nonconducted; cannot distinguish Mobitz I vs. II on ECG alone — clinical context, QRS width and site of block help.
+- Third-degree (complete) AV block:
+  - AV dissociation with independent atrial (P) and ventricular (QRS) rates; escape rhythm origin determines QRS width and rate (junctional 40–60 bpm narrow, ventricular 20–40 bpm wide).
+
+7. Bundle branch blocks and fascicular blocks
+
+Right bundle branch block (RBBB)
+- Complete RBBB:
+  - QRS ≥120 ms.
+  - rsR′ or rSR′ (“M” pattern) in V1–V3.
+  - Wide S waves in I and V6.
+  - Secondary ST–T changes (discordant).
+- Incomplete RBBB:
+  - QRS 100–119 ms with similar morphology.
+
+Left bundle branch block (LBBB)
+- QRS ≥120 ms.
+- Broad, notched or slurred R wave in I, aVL, V5–V6.
+- Absence of Q waves in lateral leads (I, V5–V6).
+- ST–T changes opposite (discordant) to major QRS deflection.
+- LBBB usually obscures ECG diagnosis of acute MI; use clinical correlation and Sgarbossa/modified Sgarbossa criteria.
+
+Fascicular (hemiblocks)
+- Left anterior fascicular block (LAFB / left anterior hemiblock):
+  - Left axis deviation (commonly −45° to −90°).
+  - Small Q in lead I and small R in lead III (qR in I, rS in III).
+  - QRS duration usually normal (unless concomitant conduction disease).
+- Left posterior fascicular block (LPFB / left posterior hemiblock):
+  - Right axis deviation (commonly +90° to +180°).
+  - Small R in lead I and small Q in lead III (rS in I, qR in III).
+  - Must exclude other causes of RAD (RVH, lateral MI, limb lead misplacement).
+
+8. Chamber enlargement and hypertrophy criteria
+
+Left atrial enlargement (LAE)
+- P wave in lead II: duration >120 ms, often notched (two peaks).
+- V1 biphasic P with terminal negative portion ≥40 ms duration and ≥1 mm deep.
+
+Right atrial enlargement (RAE)
+- P wave amplitude in lead II >2.5 mm (tall, peaked P wave).
+- In V1, P wave initial component tall (>1.5 mm).
+
+Left ventricular hypertrophy (LVH)
+- Voltage criteria (examples; sensitivity limited):
+  - Sokolow–Lyon: S in V1 + R in V5 or V6 ≥35 mm (≥35 mV).
+  - Cornell: R in aVL + S in V3 >28 mm (men) or >20 mm (women).
+- LV strain pattern: ST depression and asymmetric T‑wave inversion in lateral leads (I, aVL, V5–V6) usually with voltage criteria.
+- Use clinical context and imaging confirmation (echo).
+
+Right ventricular hypertrophy (RVH)
+- Right axis deviation >+90° (if not due to other causes).
+- R wave in V1 >7 mm or R/S ratio >1 in V1; S wave in V5–V6 >7 mm.
+- In severe RVH, R waves persist across right precordial leads.
+
+Notes: Voltage criteria alone have limited sensitivity; integrate with clinical history and imaging (echocardiography).
+
+9. Acute myocardial infarction (STEMI and NSTEMI)
+
+General principles
+- Ischemia vs. injury vs. infarction:
+  - Ischemia: T‑wave inversion or ST depression (subendocardial).
+  - Injury: ST elevation (acute transmural).
+  - Infarction: Q waves developing (necrosis) with persistent ST–T changes.
+
+STEMI diagnostic thresholds (clinical context dependent)
+- Classic rule: New ST elevation at the J point in two contiguous leads:
+  - ≥1 mm (0.1 mV) in all leads other than V2–V3.
+  - V2–V3: ≥2 mm in men (≥20 years), ≥1.5 mm in women (≥20 years); thresholds may vary by age and guideline updates.
+- Always interpret with clinical presentation and prior ECGs; small elevations in early repolarization or pericarditis can mimic STEMI.
+
+Localization by leads (contiguous-lead groupings)
+- Inferior wall: II, III, aVF — typically RCA or sometimes LCx; look for reciprocal ST depression in I or aVL.
+  - Infero‑RV infarct: inferior STE with more STE in III > II and ST depression in V2 and V3; obtain right‑sided leads (V4R).
+- Lateral wall: I, aVL, V5–V6 — usually left circumflex or diagonal branches.
+  - High lateral: I, aVL.
+  - True lateral (V5–V6).
+- Anterior wall: V1–V4 (V1–V3 sometimes septal/anterior) — LAD territory.
+- Septal: V1–V2.
+- Posterior wall: reciprocal ST depression in V1–V3 with tall R waves and upright T waves; confirm with posterior leads V7–V9 showing ST elevation.
+- Right ventricular infarction: diagnose with right‑sided chest leads (V3R–V4R); common with inferior MI when RCA proximal.
+
+Reciprocal changes
+- ST depression in leads electrically opposite the leads with ST elevation (e.g., ST elevation in II, III, aVF with reciprocal ST depression in I, aVL).
+- Reciprocal changes support acute ischemia and increase specificity for STEMI.
+
+Evolutional stages of transmural infarction on ECG
+- Hyperacute stage:
+  - Early, minutes: very tall, peaked, broad-based T waves (hyperacute T waves) often earliest sign in affected leads.
+- Acute (injury) stage:
+  - J‑point and ST elevation develops; PR depression may be seen with pericarditis but can also accompany transmural injury at times; reciprocal ST depression in opposite leads.
+- Early subacute (hours to days):
+  - ST elevation persists or begins to resolve; T‑wave inversion begins as ST normalizes.
+- Evolving (days‑weeks):
+  - Q waves develop (pathologic Q if >40 ms or depth >25% of R in same lead) indicating myocardial necrosis; T waves deeply inverted.
+- Chronic (weeks‑months):
+  - Q waves persist; ST segments normalize; T waves may remain inverted or normalize.
+
+Special considerations
+- Posterior MI: look for horizontal ST depression and tall R waves in V1–V3; obtain posterior leads (V7–V9).
+- Right ventricular infarct: consider in inferior STEMI; look at V4R.
+- LBBB or paced rhythm: diagnosis of STEMI is more difficult. Apply Sgarbossa/modified Sgarbossa (Smith) criteria:
+  - Concordant ST elevation ≥1 mm in any lead (score 5).
+  - Concordant ST depression ≥1 mm in V1–V3 (score 3).
+  - Excessively discordant ST elevation (ST elevation ≥25% of preceding S wave amplitude) — modified criterion uses ST/S ratio ≥0.25 (score 2). A total Sgarbossa score ≥3 suggests MI.
+- Early repolarization and pericarditis can mimic STEMI — use morphology (diffuse concave ST elevation and PR depression suggests pericarditis), serial ECGs, and troponin.
+
+10. Common mimics and special ECG patterns
+- Hyperkalemia:
+  - Early: narrow, peaked T waves.
+  - Progressive: PR prolongation, flattened P waves, wide QRS, sine‑wave pattern and risk of VF/asystole.
+- Hypokalemia:
+  - Flattened T waves, prominent U waves, ST depression.
+- Pericarditis:
+  - Diffuse concave ST elevation and PR depression (PR elevation and ST depression in aVR). No reciprocal changes as in localized MI.
+- Early repolarization:
+  - Common in young healthy adults: mild ST elevation, notched J point or slurring, often V4–V6; ST elevation usually concave and stable over time.
+- CNS injury pattern:
+  - Very tall, broad-based T waves and marked QT prolongation; often associated with severe intracranial events.
+- Low voltage:
+  - QRS amplitude <5 mm in limb leads or <10 mm in precordial leads; consider obesity, pericardial effusion, COPD, hypothyroidism, infiltrative disease.
+
+11. Quick‑reference criteria and algorithms (concise)
+
+A. Rate calculation
+- Regular rhythm: 300 / # large boxes between R waves.
+- Irregular rhythm: count QRS complexes in 6‑second strip ×10.
+
+B. Axis determination (quick)
+- Look at I and aVF:
+  - I positive, aVF positive = normal axis.
+  - I positive, aVF negative = left axis deviation (evaluate aVL).
+  - I negative, aVF positive = right axis deviation.
+  - I negative, aVF negative = extreme axis.
+
+C. Approach to wide complex tachycardia
+- Assume VT until proven otherwise.
+- Look for AV dissociation, capture/fusion beats, concordance across precordium.
+- Consider patient stability: unstable → immediate synchronized cardioversion; stable → antiarrhythmic therapy and diagnostics.
+
+D. Immediate steps for suspected STEMI (ECG‑first workflow)
+1) Confirm ST elevation criteria in contiguous leads and clinical correlate (ischemic chest pain).
+2) Look for reciprocal changes and assess rhythm and hemodynamic stability.
+3) If STEMI suspected, activate reperfusion pathway (PCI if available within guideline times) — time critical.
+4) Obtain serial ECGs and right‑sided/posterior leads if indicated.
+5) Provide initial supportive care: oxygen if hypoxic, aspirin, P2Y12 agent per protocol, nitrates if not hypotensive, analgesia, hemodynamic support as needed; avoid beta blockers if signs of heart failure or shock — follow local protocols/guidelines.
+
+E. Algorithm for conduction block identification
+- QRS <120 ms with PR prolongation → likely first-degree AV nodal block.
+- QRS <120 ms with progressive PR prolongation then dropped beat → Mobitz I.
+- QRS >120 ms with sudden dropped beat → Mobitz II more likely.
+- AV dissociation → third-degree block.
+
+12. Teaching pearls and pitfalls
+- Always confirm calibration, paper speed, and lead placement if ECG is unexpected (limb lead reversal can change axis and morphology; chest lead misplacement can mimic pathologies).
+- Compare with prior ECGs — many “abnormalities” are chronic.
+- Look at the whole clinical picture: ECG is one data point; combine with history, exam, biomarkers, imaging.
+- Serial ECGs are invaluable: ischemic changes evolve — repeat ECGs if clinical suspicion persists.
+- Wide QRS tachycardia in a patient with structural heart disease is VT until disproven.
+- In hyperkalemia, ECG changes may progress rapidly; treat based on clinical context, serum potassium and ECG findings.
+
+13. Sample quick‑reference bullet lists (for rapid bedside use)
+
+Bedside checklist for a new ECG
+- Confirm patient identity, date/time, paper speed, calibration.
+- Rate and rhythm: regular vs. irregular; is there a P before each QRS?
+- PR, QRS, QT values (note prolonged intervals).
+- Axis: normal / LAD / RAD.
+- ST elevation/depression: leads and magnitude; reciprocal leads.
+- New Q waves or marked T changes.
+- Compare prior ECG.
+- If concern for acute MI → activate protocol.
+
+Common numeric cutoffs (summary)
+- PR interval: normal 120–200 ms; >200 ms first‑degree AV block.
+- QRS duration: <120 ms normal; ≥120 ms bundle branch block.
+- QTc: <440 ms men, <460 ms women; ≥500 ms high risk.
+- Significant ST elevation: ≥1 mm in contiguous limb leads; V2–V3 criteria higher.
+
+14. References and further reading (clinical practice)
+- Use current local and international guidelines (e.g., AHA/ACC, ESC) for acute coronary syndrome management and ECG criteria updates.
+- For challenging cases (LBBB, paced rhythms), apply Sgarbossa and modified Sgarbossa rules and consult cardiology for early activation when clinical suspicion is high.
+
+This guide is intended as a concise, clinically oriented reference for bedside ECG interpretation. For definitive diagnosis, always integrate with history, physical exam, biomarkers, imaging, and senior consultation where needed.
