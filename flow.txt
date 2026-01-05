@@ -1,0 +1,82 @@
+System Flow: RAG-XAI-ECG Pipeline
+
+1. Data Ingestion & Preprocessing
+   ------------------------------
+   Input: PTB-XL Dataset (Raw Waveforms .dat/.hea, Metadata .csv)
+   Script: preprocessing.py
+   Process:
+     - Load raw ECG signals (12-lead).
+     - Step 1: smooth_signal (Smoothing/Noise reduction).
+     - Step 2: notch_filter (Remove 50Hz interference).
+     - Step 3: highpass_filter (Remove baseline wander).
+     - Step 4: extract_r_peaks (Detect R-peaks).
+   Outputs:
+     - Processed Numpy Arrays (.npy) -> stored in `ecg_processed/`
+     - Rendered ECG Images (.png) -> stored in `processed_images/`
+     - Multi-hot encoded labels -> stored in `processed_labels/`
+
+2. Deep Learning Model (Diagnosis)
+   -------------------------------
+   Input: Processed Numpy Arrays (`ecg_processed/`)
+   Scripts: 
+     - Training: Model/Train/resnet50.py
+     - Inference: Model/Predict/Predict.py
+   Process:
+     - ResNet50 (1D or 2D adapted) processes the ECG signal.
+     - Classifies into diagnostic superclasses (NORM, MI, STTC, CD, HYP).
+   Outputs:
+     - Trained Model Weights (.pth)
+     - Diagnostic Predictions (Probabilities/Classes) -> "Facts Pack"
+
+3. Explainable AI (Visual Explanation)
+   -----------------------------------
+   Input: 
+     - Processed Numpy Arrays
+     - Trained Model Weights
+   Script: GradCAM.py
+   Process:
+     - Compute gradients of the target class score with respect to the final convolutional layer.
+     - Generate heatmap overlays indicating regions of interest (ROI).
+   Outputs:
+     - Grad-CAM Heatmap Images -> stored in `gradcam_out/`
+
+4. Retrieval-Augmented Generation (RAG) Pipeline
+   ---------------------------------------------
+   Input:
+     - Visual Context 1: Original ECG Image (`processed_images/`)
+     - Visual Context 2: Grad-CAM Heatmap (`gradcam_out/`)
+     - Data Context: Model Predictions ("Facts Pack")
+     - Knowledge Context: Medical Knowledge Base (`ECG_Interpretation_Guide.txt`)
+   Script: RAG_ECG_XAI.py
+   Process:
+     - Construct a multimodal prompt.
+     - Feed inputs to Multimodal LLM (Gemini 1.5 Flash/Pro or OpenAI GPT-4o).
+     - LLM synthesizes visual evidence, model confidence, and medical guidelines.
+   Outputs:
+     - Comprehensive Diagnostic Report (JSON/Text) -> `New_method_pipeline.jsonl`
+
+5. Scoring & Evaluation
+   --------------------
+   A. MLLM Referee (Comparative Evaluation)
+      Input:
+        - Generated Report (Candidate)
+        - Baseline Report (e.g., from another model or previous version)
+        - Ground Truth Report (Original PTB-XL Report in German)
+      Scripts: `MLLM_Referee/Gemini_choice.py` or `MLLM_Referee/Gpt_choice.py`
+      Process:
+        - An LLM (Gemini or GPT-4) acts as a judge.
+        - Translates English candidates to German (if needed) to match Ground Truth.
+        - Compares semantic consistency and clinical accuracy against the Ground Truth.
+        - Selects the "winner" (better report).
+      Outputs:
+        - Choice/Score indicating the superior report.
+
+   B. Quantitative Evaluation (BERTScore)
+      Input: 
+        - Generated Reports (`New_method_pipeline.jsonl`)
+        - Ground Truth Reference Reports (from PTB-XL metadata)
+      Script: Bertscore/Bertscore.py
+      Process:
+        - Compute semantic similarity using BERTScore.
+      Outputs:
+        - Evaluation Metrics (Precision, Recall, F1)

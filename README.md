@@ -1,155 +1,114 @@
-# RAG_ECG
+# RAG-XAI-ECG: Enhancing Explainability in Cardiac Diagnosis
 
-Utilities for preprocessing PTB-XL ECGs, training/inference with a CNN, generating Grad-CAM visual explanations, and producing multimodal ECG interpretation reports using LLM/MLLM (Gemini/OpenAI).
+This repository contains the implementation for **Enhancing Explainability in Cardiac Diagnosis By Using Retrieval-Augmented Multimodal LLMs**. It provides a comprehensive pipeline for ECG analysis, combining Deep Learning (ResNet50), Explainable AI (Grad-CAM), and Retrieval-Augmented Generation (RAG) with Multimodal LLMs (Gemini/OpenAI) to generate interpretable cardiac diagnosis reports.
 
-## What’s in this repo
+## 🌟 Key Features
 
-- `preprocessing.py`: Loads PTB-XL waveform records, applies basic filtering, extracts R-peaks, and exports:
-  - processed arrays (`.npy`)
-  - rendered ECG images (`.png`)
-  - multi-label targets (`.npy`)
+- **ECG Preprocessing**: Automated filtering, R-peak detection, and conversion of PTB-XL waveform data into processed arrays and images.
+- **Deep Learning Model**: ResNet50-based classifier for multi-label ECG diagnosis.
+- **Explainable AI (XAI)**: Grad-CAM heatmap generation to visualize regions of interest in ECG signals.
+- **RAG Pipeline**: A multimodal system that integrates:
+  - Original ECG images
+  - Grad-CAM visual explanations
+  - Diagnostic predictions (Facts Pack)
+  - Medical Knowledge Base (`ECG_Interpretation_Guide.txt`)
+- **Automated Reporting**: Generates detailed clinical reports using Gemini 1.5 Flash/Pro or OpenAI models.
+- **Evaluation**: BERTScore-based evaluation of generated reports against reference interpretations.
 
-- `Model/Train/resnet50.py`: Example training script for a ResNet-based classifier.
-- `Model/Predict/Predict.py`: Example inference script (generates predictions from processed inputs).
-
-- `GradCAM.py`: Generates Grad-CAM heatmaps/overlays for processed ECG images using a trained CNN.
-
-- `RAG_ECG_XAI.py`: Multimodal pipeline that combines:
-  1) Grad-CAM (highest priority)
-  2) the original processed ECG image
-  3) a “facts pack” (predictions/probabilities)
-  4) an ECG knowledge text (`ECG_Interpretation_Guide.txt`)
-
-  and produces one JSON object per record.
-
-- `MLLM_Referee/`: Scripts to compare/choose between outputs with Gemini or OpenAI.
-- `Bertscore/Bertscore.py`: Computes BERTScore between generated impressions and PTB-XL reference reports.
-
-## Folder structure
+## 📂 Project Structure
 
 ```text
 RAG_ECG/
-  ECG_Interpretation_Guide.txt
-  ECG_Reading_Guide.py
-  GradCAM.py
-  preprocessing.py
-  RAG_ECG_XAI.py
-  scp_codes.jsonl
-  requirements.txt
-  README.md
-
-  Bertscore/
-    Bertscore.py
-
-  Books/
-    ... (PDFs used to build ECG_Interpretation_Guide.txt)
-
-  Model/
-    best_resnet50_fold4.pth
-    best_resnet50_ecg_model.pth
-    Predict/
-      Predict.py
-    Train/
-      resnet50.py
-
-  ecg_processed/
-    ... (processed .npy arrays)
-
-  processed_images/
-    ... (rendered ECG images .png)
-
-  processed_labels/
-    ... (label arrays .npy)
-
-  gradcam_out/
-    ... (Grad-CAM overlays / heatmaps)
-
-  MLLM_Referee/
-    Gemini_choice.py
-    Gemini_Score.py
-    Gpt_choice.py
-    ...
-
-  ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1/
-    ... (PTB-XL dataset files)
+├── Bertscore/                  # Evaluation scripts
+│   └── Bertscore.py
+├── Books/                      # Source materials for Knowledge Base
+├── ecg_processed/              # Processed ECG numpy arrays (.npy)
+├── gradcam_out/                # Generated Grad-CAM heatmaps
+├── MLLM_Referee/               # Scripts for comparing LLM outputs
+├── Model/                      # Model training and inference
+│   ├── Predict/                # Inference scripts
+│   ├── Train/                  # Training scripts
+│   ├── best_resnet50_ecg_model.pth
+│   └── best_resnet50_fold4.pth
+├── processed_images/           # Rendered ECG images (.png)
+├── ptb-xl-a-large.../          # PTB-XL Dataset folder
+├── ECG_Interpretation_Guide.txt # RAG Knowledge Base
+├── ECG_Reading_Guide.py        # Guide processing utility
+├── GradCAM.py                  # Grad-CAM generation script
+├── preprocessing.py            # Data preprocessing script
+├── RAG_ECG_XAI.py              # Main RAG pipeline script
+├── requirements.txt            # Python dependencies
+└── scp_codes.jsonl             # SCP code definitions
 ```
 
-## Setup (Windows)
+## 🚀 Installation
 
-### 1) Create a virtual environment
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/NonomiyaIzumi/RAG_XAI_ECG.git
+    cd RAG_XAI_ECG
+    ```
 
-```bat
-py -m venv .venv
-.venv\Scripts\activate
-python -m pip install --upgrade pip
-```
+2.  **Create and activate a virtual environment (Optional but recommended):**
+    ```bash
+    python -m venv .venv
+    # Windows
+    .venv\Scripts\activate
+    # Linux/Mac
+    source .venv/bin/activate
+    ```
 
-### 2) Install dependencies
+3.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-```bat
-pip install -r requirements.txt
-```
+4.  **Dataset Setup:**
+    - Download the [PTB-XL dataset](https://physionet.org/content/ptb-xl/).
+    - Extract it into the repository folder (default expected path: `ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1`).
+    - Ensure `ptbxl_database.csv` is available in the dataset folder.
 
-Notes:
-- `torch`/`torchvision` may need a custom install (CUDA vs CPU). If you want CUDA, install the correct wheel from PyTorch’s official instructions, then re-run `pip install -r requirements.txt`.
+## 🛠️ Usage
 
-## Data / paths
-
-Several scripts use **hard-coded paths** at the top of the file (no CLI arguments). You will usually need to edit these constants before running:
-
-- PTB-XL waveform root directory (e.g. `record_base` in `preprocessing.py`)
-- PTB-XL metadata CSV paths (e.g. `ptbxl_database*.csv`, `scp_statements.csv`)
-- Model weights path (e.g. `WEIGHTS` in `GradCAM.py`)
-- Input/output directories (`processed_images`, `gradcam_out`, etc.)
-
-## API keys
-
-Different scripts expect keys in different places:
-
-- OpenAI scripts (`ECG_Reading_Guide.py`, `MLLM_Referee/Gpt_choice.py`)
-  - Set environment variable `OPENAI_API_KEY` (or `OPENAI_API_KEY_1` depending on the script).
-
-- Gemini scripts (`RAG_ECG_XAI.py`, `MLLM_Referee/Gemini_choice.py`)
-  - These currently use an in-code `API_KEYS = [...]` list. Put valid keys there (or refactor to read from env vars if you prefer).
-
-## Typical run order
-
-1) Preprocess PTB-XL into arrays/images:
-
-```bat
+### 1. Preprocessing
+Convert raw PTB-XL waveforms into processed images and numpy arrays.
+```bash
 python preprocessing.py
 ```
+*Outputs to `ecg_processed/` and `processed_images/`.*
 
-2) Train a model (optional):
+### 2. Model Training & Inference
+Train the ResNet50 model or run inference on processed data.
+- **Training**: `python Model/Train/resnet50.py`
+- **Inference**: `python Model/Predict/Predict.py`
 
-```bat
-python Model\Train\resnet50.py
-```
-
-3) Run inference (optional):
-
-```bat
-python Model\Predict\Predict.py
-```
-
-4) Generate Grad-CAM overlays:
-
-```bat
+### 3. Generate Explanations (Grad-CAM)
+Generate visual heatmaps for the model's predictions.
+```bash
 python GradCAM.py
 ```
+*Outputs to `gradcam_out/`.*
 
-5) Generate multimodal JSON reports (Gemini):
-
-```bat
+### 4. Run RAG Pipeline
+Generate diagnostic reports using the Multimodal RAG system.
+**Note**: You must configure your API keys in `RAG_ECG_XAI.py` before running.
+```python
+# In RAG_ECG_XAI.py
+API_KEYS = [
+    "YOUR_GEMINI_API_KEY_HERE",
+]
+```
+Run the pipeline:
+```bash
 python RAG_ECG_XAI.py
 ```
+*Outputs generated reports to `New_method_pipeline.jsonl`.*
 
-6) Evaluate with BERTScore (optional):
-
-```bat
-python Bertscore\Bertscore.py
+### 5. Evaluation
+Evaluate the quality of generated reports using BERTScore.
+```bash
+python Bertscore/Bertscore.py
 ```
 
-## Outputs
-
-Outputs are written to files/directories configured at the top of each script (e.g. `processed_images*`, `gradcam_out`, `New_method_outputs.jsonl`, `bertscore_*.csv`).
+## 📄 Citation
+If you use this code or dataset in your research, please refer to the associated paper: `XAI_ECG_paper.pdf`.

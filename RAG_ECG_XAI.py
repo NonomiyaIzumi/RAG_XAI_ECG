@@ -12,7 +12,7 @@ except Exception as e:
     raise SystemExit("❌ Missing dependency 'google-generativeai'. Cài bằng: pip install google-generativeai") from e
 
 # ---------------- CONFIG ----------------
-PRED_JSONL     = "merged_sorted.jsonl"
+PRED_JSONL     = "Model/Predict/all_predictions.jsonl"
 CAM_DIR        = "gradcam_out"
 PROC_DIR       = "processed_images"
 ECG_KNOWLEDGE_TXT = "ECG_Interpretation_Guide.txt"

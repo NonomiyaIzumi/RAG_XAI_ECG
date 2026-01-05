@@ -9,3 +9,6 @@ Model/Predict/22k_labels.npy
 Model/Train/ecg_images_array.npy
 Model/best_resnet50_ecg_model.pth
 Model/best_resnet50_fold4.pth
+XAI_ECG_paper.pdf
+scp_codes.jsonl
+
