@@ -2,7 +2,7 @@
 
 This repository contains the implementation for **Enhancing Explainability in Cardiac Diagnosis By Using Retrieval-Augmented Multimodal LLMs**. It provides a comprehensive pipeline for ECG analysis, combining Deep Learning (ResNet50), Explainable AI (Grad-CAM), and Retrieval-Augmented Generation (RAG) with Multimodal LLMs (Gemini/OpenAI) to generate interpretable cardiac diagnosis reports.
 
-## 🌟 Key Features
+##  Key Features
 
 - **ECG Preprocessing**: Automated filtering, R-peak detection, and conversion of PTB-XL waveform data into processed arrays and images.
 - **Deep Learning Model**: ResNet50-based classifier for multi-label ECG diagnosis.
@@ -15,7 +15,7 @@ This repository contains the implementation for **Enhancing Explainability in Ca
 - **Automated Reporting**: Generates detailed clinical reports using Gemini 1.5 Flash/Pro or OpenAI models.
 - **Evaluation**: BERTScore-based evaluation of generated reports against reference interpretations.
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 RAG_ECG/
@@ -41,7 +41,7 @@ RAG_ECG/
 └── scp_codes.jsonl             # SCP code definitions
 ```
 
-## 🚀 Installation
+##  Installation
 
 1.  **Clone the repository:**
     ```bash
@@ -68,7 +68,7 @@ RAG_ECG/
     - Extract it into the repository folder (default expected path: `ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.1`).
     - Ensure `ptbxl_database.csv` is available in the dataset folder.
 
-## 🛠️ Usage
+##  Usage
 
 ### 1. Preprocessing
 Convert raw PTB-XL waveforms into processed images and numpy arrays.
@@ -110,5 +110,6 @@ Evaluate the quality of generated reports using BERTScore.
 python Bertscore/Bertscore.py
 ```
 
-## 📄 Citation
+##  Citation
 If you use this code or dataset in your research, please refer to the associated paper: `XAI_ECG_paper.pdf`.
+
